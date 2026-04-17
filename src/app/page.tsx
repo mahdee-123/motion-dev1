@@ -1,11 +1,21 @@
 export default function Home() {
   return (
-    <main>
-      <div className="bg-background-secondary h-screen w-full flex items-center justify-center">
-        <div className="h-full w-1/2 bg-amber-400"></div>
-        <div className="h-full w-1/2 bg-sky-700"></div>
+    // h-svh ensures no scroll even with address bar
+    <main className="h-svh w-full flex flex-col overflow-hidden bg-background">
+      
+      {/* Scrollable Content Area (jodi thake) */}
+      <div className="flex-1 overflow-y-auto p-4">
+        {/* Tomar main app content ekhane thakbe */}
+        <h1>Aether App Content</h1>
       </div>
-      <div className="bg-[#E8F5BD] h-screen w-full"></div>
+
+      {/* Fixed Bottom Navigation */}
+      <nav className="h-16 border-t border-white/10 flex items-center justify-around bg-background-secondary">
+        <button>Home</button>
+        <button>Search</button>
+        <button>Settings</button>
+      </nav>
+
     </main>
   );
 }
